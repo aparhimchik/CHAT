@@ -40,7 +40,7 @@ schema.virtual('password')
 		this._plainPassword = password;
 		this.salt = Math.random() + '';
 		
-		this.hashPassword = this.encryptPassword(password);
+		this.hashedPassword = this.encryptPassword(password);
 	})
 	.get(function()
 	{

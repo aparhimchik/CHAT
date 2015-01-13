@@ -20,8 +20,8 @@ exports.send = function(req, res)
 			
 			req.session.user = user._id;
 			
-			console.log('req.session.user = ');
-			console.log(req.session.user);
+			// console.log('req.session.user = ');
+			// console.log(req.session.user);
 			res.redirect('/');			
 		}		
 	);
