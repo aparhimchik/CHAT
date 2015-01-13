@@ -1,0 +1,7 @@
+extends layout
+block content
+    h2 Регистрация
+    form(method='post', action='/reg')
+        input(type='text', name='username')
+        input(type='password', name='password')
+        input(type='submit', name='ok')

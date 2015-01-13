@@ -1,0 +1,8 @@
+//extends layout
+h1	Кабинет пользователя
+if	userid
+	a(href=	'/logout')Выход
+	a(href=	'/cobinet')Кабинет
+else
+	a(href='/reg')Вход/Регистрация
+block content

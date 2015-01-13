@@ -1,0 +1,77 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}*/
+body{
+margin:0;
+padding:0;
+background: #777fff;
+}
+
+.logo{
+float: left;
+}
+
+.header
+{height: 225px;
+background: url('../imgages/background.jpg');
+}
+
+.header h1
+{
+float: right;
+color: #000000;
+text-shadow: 1px 1px 1px gold;
+margin: 0;
+padding-left: 10px;
+padding-top: 10px;
+}
+.menu
+{
+display: -moz-box; display: webkit-flex;
+display: flex;
+width: 90%;
+margin: 0 auto;
+}
+.menu a{
+display: block;
+-moz-box-flex:1;
+-webkit-flex:1;
+flex: 1;
+background: blue;
+color: white;
+text-decoration: none;
+border-right: 1px solid white;
+padding: 2px;
+text-align: center;
+}
+
+.mainblock{
+background: white;
+border-radius: 3px;
+box-shadow: 1px 1px 1px block;
+padding 4px;
+margin: 2px;
+}
+
+.footer{
+padding-top: 30px;
+padding-bottom: 30px;
+background: white;
+text-align: center;
+}
+
+@media screen and (max-width: 700px)
+{
+	.logo
+	{
+	display: none;
+	}
+	.header{
+	height: 60px;
+	}
+}

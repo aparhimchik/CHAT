@@ -1,0 +1,19 @@
+doctype html
+html
+	head
+	link(rel='stylesheet',	href='/stylesheets/style.css')
+	body
+	div.logo
+		img#pic(src='images/logo.jpg')
+		h1 Электронная библотека
+	div.menu
+		a(href='index')Главная
+		a(href='about')О	компании
+		a(href='news')Новости
+		if(userid)
+			a(href='cobinet')Личный	кабинет
+			a(href='logout')Выйти
+		else
+			a(href='login')Войти
+	block content
+	div.footer &copy
