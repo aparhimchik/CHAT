@@ -14,6 +14,7 @@ var auth = require('./routes/auth');
 
 var reg  = require('./routes/reg');
 var chat = require('./routes/chat');
+var video = require('./routes/video');
 
 var app = express();
 var http = require('http').Server(app);
@@ -78,6 +79,7 @@ app.get('/reg', reg.index);
 app.get('/cobinet', checkAuth, auth.cobinet);
 app.get('/logout', checkAuth, reg.logout);
 app.get('/chat', chat.index);
+app.get('/video', video.index);
 //id всегда  должна быть последней
 app.get('/:id', routes.index);
 
