@@ -1,18 +1,21 @@
 doctype html
 html
 	head
-	link(rel='stylesheet',	href='/stylesheets/style.css')
+		for style in styles
+			link(rel='stylesheet', href='#{style}')
+		for script in scripts
+			script(src='#{script}')
 	body
 	div.logo
 		img#pic(src='images/logo.jpg')
 		h1 Электронная библотека
 	div.menu
 		a(href='index')Главная
-		a(href='about')О	компании
+		a(href='about')О компании
 		a(href='news')Новости
 		a(href='video')Видео
 		if(userid)
-			a(href='cobinet')Личный	кабинет
+			a(href='cobinet')Личный кабинет
 			a(href='logout')Выйти
 		else
 			a(href='login')Войти

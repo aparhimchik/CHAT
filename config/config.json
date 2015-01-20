@@ -1,4 +1,6 @@
 {
+	"scripts":[],
+	"styles":["/stylesheets/style.css"],
 	"port":3000,
 	"mongoose":
 	{
@@ -12,5 +14,5 @@
 				}
 			}
 		}
-	}
+	}	
 }

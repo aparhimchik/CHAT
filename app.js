@@ -15,6 +15,7 @@ var auth = require('./routes/auth');
 var reg  = require('./routes/reg');
 var chat = require('./routes/chat');
 var video = require('./routes/video');
+var canvas = require('./routes/canvas');
 
 var app = express();
 var http = require('http').Server(app);
@@ -60,11 +61,14 @@ app.use(express.session(
 	secret: 'werr879',
 	key: 'sid'
 }))
+
 app.use(function(req, res, next)
 {
 // c помощью locals можно передавать любые глобальные переменные
 	res.locals =
 		{
+			scripts : config.get('scripts'),
+			styles: config.get('styles'),
 			userid : req.session.user
 		}
 		next();
@@ -80,6 +84,7 @@ app.get('/cobinet', checkAuth, auth.cobinet);
 app.get('/logout', checkAuth, reg.logout);
 app.get('/chat', chat.index);
 app.get('/video', video.index);
+app.get('/canvas', canvas.index);
 //id всегда  должна быть последней
 app.get('/:id', routes.index);
 
