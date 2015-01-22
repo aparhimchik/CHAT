@@ -16,6 +16,7 @@ var reg  = require('./routes/reg');
 var chat = require('./routes/chat');
 var video = require('./routes/video');
 var canvas = require('./routes/canvas');
+var location = require('./routes/location');
 
 var app = express();
 var http = require('http').Server(app);
@@ -85,6 +86,7 @@ app.get('/logout', checkAuth, reg.logout);
 app.get('/chat', chat.index);
 app.get('/video', video.index);
 app.get('/canvas', canvas.index);
+app.get('/location', location.index);
 //id всегда  должна быть последней
 app.get('/:id', routes.index);
 

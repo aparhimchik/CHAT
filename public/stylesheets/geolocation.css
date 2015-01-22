@@ -1,0 +1,8 @@
+/* css: https://developers.google.com/maps/documentation/javascript/examples/map-geolocation*/
+#map-canvas {
+        height: 100%;
+		position: absolute;
+		width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
